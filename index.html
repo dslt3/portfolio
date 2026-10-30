@@ -107,6 +107,35 @@ section{position:relative}
 .about .note b{font-family:Oswald;font-weight:500;font-size:20px;display:block;line-height:1.1}
 .about .note small{font-size:12px;color:#5B7178;display:block;max-width:20ch;line-height:1.35;margin-top:3px}
 
+/* ─── 2б. школа ─── */
+.school{position:relative;isolation:isolate;overflow:hidden;color:var(--cream);background:radial-gradient(60% 75% at 76% 62%,#3A4A26 0%,rgba(58,74,38,0) 70%),linear-gradient(180deg,#223121 0%,#1A2619 100%);padding:clamp(80px,calc(var(--v)*9),120px) 0}
+.scgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,calc(var(--v)*5),80px);align-items:center;width:min(1280px,100% - var(--pad)*2)}
+.school .ttl .a{color:#F0B04A;margin-left:.4em}
+.scnote{margin-top:24px;max-width:50ch;color:#DEDBC6;font-size:clamp(16px,calc(var(--v)*1.2),18px);line-height:1.55}
+.tab{margin-top:26px;border-radius:18px;background:rgba(255,244,234,.05);border:1px solid rgba(255,244,234,.13);padding:4px 20px 10px;max-width:640px}
+.tab table{width:100%;border-collapse:collapse}
+.tab caption{text-align:left;font-family:Oswald;font-weight:500;text-transform:uppercase;letter-spacing:.05em;font-size:13px;color:#C9C6A2;padding:14px 0 4px}
+.tab th{font-weight:500;font-size:12.5px;line-height:1.2;color:#E2DFCB;text-align:center;padding:8px 4px 9px;border-bottom:1px solid rgba(255,244,234,.16);white-space:nowrap}
+.tab th small{display:block;font-size:11px;color:#A8A98A;margin-top:2px}
+.tab th:first-child{text-align:left;vertical-align:bottom;color:#A8A98A}
+.tab td{padding:6px 4px;border-bottom:1px solid rgba(255,244,234,.07);text-align:center;font-family:Oswald;font-weight:500;font-size:19px;line-height:1.2;width:13%}
+.tab td:first-child{text-align:left;font-family:Golos,sans-serif;font-weight:400;font-size:14.5px;color:#E8E5D2;width:auto}
+.tab tbody tr:last-child td{border-bottom:0}
+.tab .g5{color:#F0B04A}
+.tab .g0{color:rgba(255,244,234,.22);font-weight:400}
+.school{padding-bottom:0}
+.scgrid{align-items:end}
+.scleft{padding-bottom:clamp(60px,calc(var(--v)*8),110px);align-self:center}
+.scright{position:relative;align-self:end;display:flex;justify-content:flex-start}
+.scstage{position:relative;width:min(calc(100% + min(6vw,max(var(--pad),(100vw - 1280px)/2) - 8px)),940px);flex:none}
+.scph{position:relative;z-index:1;width:100%;max-width:none;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+.scstage .doc{position:absolute;width:auto}
+.scstage .doc .img{border-radius:6px;box-shadow:0 22px 44px rgba(0,0,0,.4)}
+.scstage .doc b,.scstage .doc small{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0}
+.scright .c1{z-index:2;left:13%;top:12%;width:21%;rotate:-6deg}
+.scright .c2{z-index:0;right:12%;top:-12%;width:33%;rotate:5deg}
+.scright .c3{z-index:2;right:0;left:auto;top:50%;width:32%;rotate:-3deg}
+
 /* ─── 3. цифры ─── */
 .nums{position:relative;isolation:isolate;background:radial-gradient(45% 70% at 50% 62%,rgba(194,75,34,1) 0%,rgba(194,75,34,0) 72%),linear-gradient(180deg,#A3361A,var(--ember));overflow:hidden}
 .nums::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
@@ -130,7 +159,6 @@ section{position:relative}
 
 /* ─── 4. путь ─── */
 .path{background:var(--teal);padding:clamp(80px,calc(var(--v)*9),120px) 0;position:relative;overflow:hidden;isolation:isolate}
-.yrs{position:absolute;z-index:-1;right:calc(var(--v)*-2);top:50%;transform:translateY(-50%);font-family:Oswald;font-weight:700;font-size:clamp(110px,calc(var(--v)*15),280px);line-height:1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(63,180,218,.28)}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,calc(var(--v)*5),90px);align-items:center}
 .path .ttl .a{color:var(--jersey);margin-left:.4em}
 .tl{list-style:none;position:relative;padding-left:30px;margin-top:28px}
@@ -209,6 +237,12 @@ section{position:relative}
 .docs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:28px clamp(14px,calc(var(--v)*1.6),24px);margin-top:clamp(28px,4vh,48px);align-items:start}
 
 .docs .wide{grid-column:span 2}
+.docs{grid-template-columns:minmax(0,1.3fr) minmax(0,1.3fr) repeat(7,minmax(0,1fr))}
+.docs .medals{grid-column:1/span 2;grid-row:1/span 2;align-self:center}
+.medals .mimg{display:block}
+.medals .mimg img{width:100%;height:auto;filter:drop-shadow(0 16px 22px rgba(13,43,51,.2));transition:transform .3s}
+.medals:hover .mimg img{transform:translateY(-4px)}
+.medals .mtx b{font-family:Oswald;font-weight:500;font-size:20px;text-transform:uppercase;letter-spacing:.01em;margin-top:14px}
 .doc{display:block;text-align:left;width:100%}
 .doc .img{display:block;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(13,43,51,.12);transition:transform .3s,box-shadow .3s}
 .doc:hover .img{transform:translateY(-4px);box-shadow:0 16px 34px rgba(13,43,51,.18)}
@@ -264,6 +298,11 @@ section{position:relative}
   .item{grid-template-columns:1fr;gap:4px;padding:14px 18px}
   .tag,.meta{bottom:5%}
 }
+@media (max-width:1140px){
+  .menu{display:none}
+  .burger{display:grid}
+  .top .pill{display:none}
+}
 @media (max-width:1060px){
   .menu{display:none}
   .burger{display:grid}
@@ -271,6 +310,10 @@ section{position:relative}
   .docs{grid-template-columns:repeat(10,minmax(0,1fr))}
   .docs .doc{grid-column:span 2}
   .docs .wide{grid-column:span 5}
+  .docs .medals{grid-column:1/-1;grid-row:auto;display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,48px);margin-bottom:8px}
+  .medals .mimg{width:min(46%,320px);flex:none}
+  .medals .mtx b{font-size:26px;margin-top:0}
+  .medals .mtx small{font-size:15px;max-width:26ch}
   .item{grid-template-columns:1fr;gap:4px;padding:14px 18px}
   .lfig .fam{max-width:320px;padding:18px 20px}
   .fam .it{font-size:26px}
@@ -304,6 +347,16 @@ section{position:relative}
   .about .fig{justify-self:center;width:min(100%,560px)}
   .about .fig .pf{height:auto;width:100%}
   .about .note{right:auto;left:0;top:auto;bottom:24px}
+  /* школа */
+  .scgrid{grid-template-columns:1fr}
+  .scleft{padding-bottom:10px}
+  .scright{margin-top:30px}
+  .scstage{width:min(100%,640px);margin-inline:auto}
+  .scright{justify-content:center}
+  .scright .c1{left:8%;top:8%;width:22%}
+  .scright .c2{right:12%;top:-16%;width:34%}
+  .scright .c3{right:1%;left:auto;top:48%;width:33%}
+  .tab{max-width:none}
   /* спорт */
   .nums .pin{width:100%;height:auto;min-height:0;padding:110px 0 30px;display:flex;flex-direction:column}
   .nums .L,.nums .R,.nums .cutw,.stats{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none}
@@ -320,7 +373,6 @@ section{position:relative}
   .pgrid{grid-template-columns:1fr}
   .pwrap{max-width:560px;width:100%;margin-inline:auto}
   .pcap2{left:12px;bottom:12px;font-size:12.5px;padding:7px 12px}
-  .yrs{display:none}
   /* связующий */
   .courtw{display:none}
   .sgrid{grid-template-columns:1fr}
@@ -358,9 +410,19 @@ section{position:relative}
   .ct{flex-direction:row;align-items:center;border-radius:99px;padding:10px 10px 10px 26px}
 }
 @media (max-width:599px){
+  .tab{padding:2px 12px 8px}
+  .tab td{font-size:17px;padding:6px 2px}
+  .tab td:first-child{font-size:13.5px}
+  .tab th{font-size:11.5px;padding-inline:2px}
+  .tab th small{font-size:10px}
+  .chips{display:grid;grid-template-columns:1fr 1fr}
+  .chips div{padding:11px 13px}
+  .chips b{font-size:clamp(15px,4.4vw,17px);white-space:nowrap}
   .docs{grid-template-columns:1fr 1fr}
   .docs .doc{grid-column:auto}
   .docs .wide{grid-column:span 2}
+  .docs .medals{grid-column:1/-1;gap:16px}
+  .medals .mtx b{font-size:22px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important}
@@ -372,13 +434,13 @@ section{position:relative}
 <header class="top" id="top">
   <a class="brand" href="#hero"><i>РШ</i><span>Роман Шулегин</span></a>
   <nav class="menu" aria-label="Разделы">
-    <a href="#about">О Романе</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a>
+    <a href="#about">О Романе</a><a href="#school">Школа</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a>
   </nav>
   <a class="pill" href="#contact">Связаться</a>
   <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer"><span></span></button>
 </header>
 <nav class="drawer" id="drawer" aria-label="Разделы">
-  <a href="#about">О Романе</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a><a href="#contact">Контакты</a>
+  <a href="#about">О Романе</a><a href="#school">Школа</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a><a href="#contact">Контакты</a>
 </nav>
 
 <main>
@@ -403,23 +465,62 @@ section{position:relative}
 <section class="about" id="about">
   <div class="wrap grid">
     <div>
-      <h2 class="ttl rv"><span class="b" style="display:block">О Романе</span><span class="a" style="display:block">коротко и по делу</span></h2>
+      <h2 class="ttl rv"><span class="b" style="display:block">О Романе</span><span class="a" style="display:block">учёба и волейбол</span></h2>
       <div class="lede rv">
-        <p>Роман — связующий, игрок, который управляет атакой команды. В спортивной школе с 2021 года, неоднократный победитель и призёр турниров, дважды призёр всероссийских соревнований по пляжному волейболу. Победитель международной олимпиады по логике и математике.</p>
+        <p>Роман учится в 6 классе лингвистической школы № 43 в Санкт-Петербурге. Победитель международной олимпиады по логике и математике: любит задачи, где нужно просчитать ходы наперёд.</p>
+        <p>Роман — связующий, игрок, который управляет атакой команды. Играет с 2021 года, с 2022-го — в спортивной школе. Неоднократный победитель и призёр турниров, дважды призёр всероссийских соревнований по пляжному волейболу.</p>
         <p>В свободное время — шахматы, техника и всё, что можно разобрать и понять, как оно устроено. Стремится учиться там, где спорт и точные науки развиваются вместе.</p>
       </div>
       <div class="chips rv">
+        <div><small>Школа</small><b>№ 43, 6 класс</b></div>
         <div><small>Дата рождения</small><b>03.06.2014</b></div>
-        <div><small>Школа</small><b>№ 43, 5 класс</b></div>
         <div><small>Город</small><b>Санкт-Петербург</b></div>
-        <div><small>Гражданство</small><b>РФ</b></div>
         <div><small>Амплуа</small><b>Связующий</b></div>
-        <div><small>Спортшкола</small><b>с 2021 года</b></div>
+        <div><small>Спортшкола</small><b>с 2022 года</b></div>
       </div>
     </div>
     <div class="fig">
       <img class="pf" src="img/portrait2-1100.webp" srcset="img/portrait2-640.webp 471w, img/portrait2-1100.webp 810w" sizes="(max-width:760px) 100vw, 40vw" width="810" height="1100" alt="Роман на пляжном турнире" loading="lazy">
       <div class="note rv"><img src="img/beachset-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Связующий</b><small>амплуа в классическом и пляжном волейболе</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2б -->
+<section class="school" id="school">
+  <div class="wrap scgrid">
+    <div class="scleft">
+      <h2 class="ttl"><span class="b" style="display:block">Школа</span><span class="a" style="display:block">№ 43, 6 класс</span></h2>
+      <p class="scnote">Лингвистическая школа с углублённым изучением испанского и английского языков.</p>
+      <div class="tab">
+        <table>
+          <caption>Годовые оценки</caption>
+          <thead><tr><th>Предмет</th><th>2 кл.<small>2022–23</small></th><th>3 кл.<small>2023–24</small></th><th>4 кл.<small>2024–25</small></th><th>5 кл.<small>2025–26</small></th></tr></thead>
+          <tbody>
+          <tr><td>Русский язык</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+          <tr><td>Литературное чтение, литература</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+          <tr><td>Математика</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+          <tr><td>Испанский язык</td><td class="g5">5</td><td class="g5">5</td><td>3</td><td>3</td></tr>
+          <tr><td>Английский язык</td><td class="g5">5</td><td class="g5">5</td><td>4</td><td>3</td></tr>
+          <tr><td>Окружающий мир</td><td>4</td><td>4</td><td>4</td><td class="g0">—</td></tr>
+          <tr><td>История</td><td class="g0">—</td><td class="g0">—</td><td class="g0">—</td><td>4</td></tr>
+          <tr><td>География</td><td class="g0">—</td><td class="g0">—</td><td class="g0">—</td><td>4</td></tr>
+          <tr><td>Биология</td><td class="g0">—</td><td class="g0">—</td><td class="g0">—</td><td>4</td></tr>
+          <tr><td>Технология, труд</td><td>4</td><td class="g5">5</td><td class="g5">5</td><td>4</td></tr>
+          <tr><td>Изобразительное искусство</td><td class="g5">5</td><td class="g5">5</td><td>4</td><td class="g5">5</td></tr>
+          <tr><td>Музыка</td><td class="g5">5</td><td class="g5">5</td><td class="g5">5</td><td class="g5">5</td></tr>
+          <tr><td>Физическая культура</td><td class="g5">5</td><td class="g5">5</td><td class="g5">5</td><td class="g5">5</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scright">
+      <div class="scstage">
+        <img class="scph" src="img/lesson7-1200.webp" srcset="img/lesson7-760.webp 944w, img/lesson7-1200.webp 1491w" sizes="(max-width:760px) 100vw, 50vw" width="1491" height="1200" alt="Роман на уроке" loading="lazy">
+        <button class="doc sdoc c1" data-full="img/s6-900.webp"><span class="img"><img src="img/s6-360.webp" srcset="img/s6-360.webp 360w, img/s6-900.webp 900w" sizes="(max-width:760px) 30vw, 14vw" width="360" height="509" alt="" loading="lazy"></span><b>Грамота</b><small>За успешную учёбу, 2025</small></button>
+        <button class="doc sdoc c2" data-full="img/s7-900.webp"><span class="img"><img src="img/s7-900.webp" width="900" height="637" alt="" loading="lazy"></span><b>Диплом 1-й степени</b><small>Международная олимпиада по логике и математике</small></button>
+        <button class="doc sdoc c3" data-full="img/s8-900.webp"><span class="img"><img src="img/s8-900.webp" width="900" height="637" alt="" loading="lazy"></span><b>Диплом 2-й степени</b><small>Международная олимпиада по логике и математике</small></button>
+      </div>
     </div>
   </div>
 </section>
@@ -432,7 +533,7 @@ section{position:relative}
 <div class="cutw"><img class="nball" src="img/beachball-240.webp" width="240" height="240" alt=""><img class="cut" src="img/set2-1100.webp" srcset="img/set2-650.webp 157w, img/set2-1100.webp 265w" sizes="(max-width:760px) 46vw, 20vw" width="265" height="1100" alt="Роман в передаче на песке" loading="lazy"></div>
     <div class="stats">
       <div class="stat"><b>Призёр</b><span>всероссийских соревнований по пляжному волейболу — дважды</span></div>
-      <div class="stat"><b>Более 5 лет</b><span>в спортивной школе: классический и пляжный волейбол</span></div>
+      <div class="stat"><b>Более 4 лет</b><span>в спортивной школе: классический и пляжный волейбол</span></div>
       <div class="stat"><b>Победитель</b><span>турниров в составе команды — неоднократно</span></div>
       <div class="stat"><b>Выездные турниры</b><span>Санкт-Петербург, Вологда, Великий Новгород, Калининградская область</span></div>
     </div>
@@ -441,14 +542,12 @@ section{position:relative}
 
 <!-- 4 -->
 <section class="path" id="path">
-  <div class="yrs" aria-hidden="true">2020—2026</div>
   <div class="wrap pgrid">
     <div class="pleft">
       <h2 class="ttl"><span class="b" style="display:block">Путь</span><span class="a" style="display:block">сезон за сезоном</span></h2>
       <ol class="tl">
-        <li><div class="y">2020</div><p>Впервые взял в руки волейбольный мяч</p></li>
-        <li><div class="y">2021</div><p>Поступил в спортивную школу</p></li>
-        <li><div class="y">2022</div><p>Первая награда «Лучший игрок команды»</p></li>
+        <li><div class="y">2021</div><p>Впервые взял в руки волейбольный мяч</p></li>
+        <li><div class="y">2022</div><p>Поступил в спортивную школу<br>Первая награда «Лучший игрок команды»</p></li>
         <li><div class="y">2024</div><p>3-е место, турнир «Зимние встречи»</p></li>
         <li><div class="y">2025</div><p><b>1-е место</b>, «ВоллейТайм», Вологда<br><b>1-е место</b>, кубок Saint Volleyball, Санкт-Петербург<br>3-е место, «Осенний кубок»</p></li>
         <li><div class="y">2026</div><p><b>3-е место</b>, всероссийский турнир «Юниор Драфт»<br><b>3-е место</b>, всероссийский фестиваль «У стен Новгородского Кремля»</p></li>
@@ -532,6 +631,7 @@ section{position:relative}
   <div class="wrap">
     <h2 class="ttl rv"><span class="b">Достижения</span><span class="a">дипломы и грамоты</span></h2>
     <div class="docs">
+      <button class="doc medals rv" data-full="img/medalwall-photo-960.webp"><span class="mimg"><img src="img/medalwall-440.webp" srcset="img/medalwall-440.webp 440w, img/medalwall-760.webp 760w" sizes="(max-width:760px) 50vw, 24vw" width="440" height="607" alt="" loading="lazy"></span><span class="mtx"><b>Медали</b><small>с турниров по классическому и пляжному волейболу</small></span></button>
       <button class="doc rv" data-full="img/s1-900.webp"><span class="img"><img src="img/s1-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>Всероссийский фестиваль «У стен Новгородского Кремля», 2026</small></button>
       <button class="doc rv" data-full="img/s3-900.webp"><span class="img"><img src="img/s3-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>«Кубок Фёдорова», Калининградская обл.</small></button>
       <button class="doc rv" data-full="img/s4-900.webp"><span class="img"><img src="img/s4-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>«Осенний кубок — 2025»</small></button>
@@ -602,7 +702,7 @@ section{position:relative}
   function closeLb(){lb.classList.remove('show');setTimeout(function(){lb.hidden=true;},300);if(lastBtn)lastBtn.focus();}
   document.querySelectorAll('.doc').forEach(function(b){
     b.addEventListener('click',function(){
-      lastBtn=b;lbImg.src=b.dataset.full;lbImg.alt=b.querySelector('b').textContent+'. '+b.querySelector('small').textContent;
+      lastBtn=b;lbImg.src=b.dataset.full;lbImg.alt=b.querySelector('b').textContent+' — '+b.querySelector('small').textContent;
       lbCap.textContent=lbImg.alt;lb.hidden=false;requestAnimationFrame(function(){lb.classList.add('show');});lb.querySelector('.x').focus();
     });
   });
@@ -653,6 +753,12 @@ section{position:relative}
     gsap.fromTo('.about .ttl .a',{x:40},{x:0,ease:'none',scrollTrigger:st('.about','top bottom','top 25%')});
     gsap.fromTo('.about .pf',{yPercent:12,scale:.96},{yPercent:0,scale:1,transformOrigin:'50% 100%',ease:'none',scrollTrigger:st('.about .fig','top bottom','bottom bottom')});
     gsap.fromTo('.about .note',{y:70,rotation:-4},{y:-30,rotation:3,ease:'none',scrollTrigger:st('.about .fig')});
+    /* «Школа»: грамоты подплывают с разной скоростью */
+    gsap.fromTo('.school .ttl .a',{x:40},{x:0,ease:'none',scrollTrigger:st('.school','top bottom','top 25%')});
+    gsap.fromTo('.scph',{y:60,scale:.96},{y:0,scale:1,transformOrigin:'50% 100%',ease:'none',scrollTrigger:st('.scright','top bottom','bottom bottom')});
+    gsap.fromTo('.scright .c1',{y:30},{y:-20,ease:'none',scrollTrigger:st('.scright')});
+    gsap.fromTo('.scright .c2',{y:50},{y:-30,ease:'none',scrollTrigger:st('.scright')});
+    gsap.fromTo('.scright .c3',{y:60},{y:-30,ease:'none',scrollTrigger:st('.scright')});
     /* «Спорт»: слова разъезжаются, мяч летит и крутится */
     gsap.fromTo('.nums .L .big',{x:'-3vw'},{x:'5vw',ease:'none',scrollTrigger:st('.nums')});
     gsap.fromTo('.nums .R .big,.nums .R .ser',{x:'4vw'},{x:'-5vw',ease:'none',scrollTrigger:st('.nums')});
@@ -677,7 +783,7 @@ section{position:relative}
     gsap.fromTo(w[2],{x:25},{x:0,ease:'none',scrollTrigger:st('.char','top bottom','top 20%')});
     gsap.fromTo('.char .dg',{y:70,scale:.96},{y:0,scale:1,transformOrigin:'50% 100%',ease:'none',scrollTrigger:st('.char .fig','top bottom','bottom bottom')});
     /* «Достижения»: колонки грамот идут с разной скоростью */
-    document.querySelectorAll('.doc').forEach(function(d){
+    document.querySelectorAll('.awards .doc').forEach(function(d){
       var right=d.offsetLeft>d.parentNode.offsetWidth*0.3&&!d.classList.contains('wide');
       gsap.fromTo(d,{y:right?55:25,rotation:right?1.5:-1.5},{y:0,rotation:0,ease:'none',scrollTrigger:st(d,'top bottom','top 55%')});
     });
@@ -724,7 +830,6 @@ section{position:relative}
     function drift(sel,trg,from,to){gsap.fromTo(sel,{yPercent:from},{yPercent:to,ease:'none',scrollTrigger:{trigger:trg,start:'top bottom',end:'bottom top',scrub:true}});}
     /* «Путь»: пять слоёв */
     var pt={trigger:'.path',start:'top bottom',end:'bottom top',scrub:true};
-    gsap.fromTo('.yrs',{y:-160},{y:160,ease:'none',scrollTrigger:pt});                  /* «2020—2026» — самый дальний */
     gsap.fromTo('.path .ttl',{y:-60},{y:60,ease:'none',scrollTrigger:pt});              /* заголовок отстаёт */
     gsap.fromTo('.pwrap',{y:90,rotation:-3},{y:-90,rotation:2,ease:'none',scrollTrigger:pt}); /* фото ближе */
     gsap.fromTo('.pcap2',{y:150,x:-20},{y:-150,x:10,ease:'none',scrollTrigger:pt});     /* плашка — самая быстрая */
@@ -743,7 +848,7 @@ section{position:relative}
     /* «Достижения»: волна грамот */
     var aw={trigger:'.awards',start:'top bottom',end:'bottom top',scrub:true};
     gsap.fromTo('.awards .ttl',{y:-50},{y:50,ease:'none',scrollTrigger:aw});         /* заголовок отстаёт */
-    var docs=[].slice.call(document.querySelectorAll('.doc'));
+    var docs=[].slice.call(document.querySelectorAll('.awards .doc'));
     var row1=docs[0].offsetTop, rowStart=0, prevTop=row1;
     docs.forEach(function(d,i){
       if(Math.abs(d.offsetTop-prevTop)>40){rowStart=i;prevTop=d.offsetTop;}
@@ -753,6 +858,14 @@ section{position:relative}
       t.fromTo(d,{y:amp,rotation:rot},{y:0,rotation:0,ease:'none',duration:1})      /* въезд: волна → ровная сетка */
        .to(d,{y:-amp*.5,rotation:-rot*.4,ease:'none',duration:1});                /* выезд: снова расходятся */
     });
+
+    /* «Школа»: заголовок отстаёт, таблица стоит, грамоты плывут с разной скоростью */
+    var sct={trigger:'.school',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.school .ttl',{y:-40},{y:20,ease:'none',scrollTrigger:sct});
+    gsap.fromTo('.scph',{y:90,scale:.97},{y:0,scale:1.02,transformOrigin:'50% 100%',ease:'none',scrollTrigger:{trigger:'.school',start:'top bottom',end:'bottom bottom',scrub:true}}); /* Рома встаёт на место к концу блока */
+    gsap.fromTo('.scright .c1',{y:30},{y:-30,ease:'none',scrollTrigger:sct});   /* грамота — дальняя */
+    gsap.fromTo('.scright .c2',{y:45},{y:-45,ease:'none',scrollTrigger:sct});
+    gsap.fromTo('.scright .c3',{y:65},{y:-65,ease:'none',scrollTrigger:sct}); /* диплом спереди — самый быстрый */
 
     /* «Логика»: Рома и байки — отдельные слои */
     var lg={trigger:'.logic',start:'top bottom',end:'bottom top',scrub:true};
