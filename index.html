@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Роман Шулегин — волейбол и инженерное мышление</title>
+<meta name="description" content="Портфолио Романа Шулегина: связующий, призёр всероссийских соревнований по пляжному волейболу, победитель международной олимпиады по логике и математике.">
+<meta name="theme-color" content="#E0521F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23E0521F%22/%3E%3Ctext x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2228%22 fill=%22%23FFF4EA%22%3E%D0%A0%D0%A8%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/oswald-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/roma-1300.webp" as="image" media="(min-width: 761px)">
+<link rel="preload" href="img/roma-700.webp" as="image" media="(max-width: 760px)">
+<style>
+@font-face{font-family:Oswald;font-weight:500;font-display:swap;src:url(fonts/oswald-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+2116}
+@font-face{font-family:Oswald;font-weight:500;font-display:swap;src:url(fonts/oswald-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Oswald;font-weight:700;font-display:swap;src:url(fonts/oswald-cyrillic-700-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+2116}
+@font-face{font-family:Oswald;font-weight:700;font-display:swap;src:url(fonts/oswald-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Corm;font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-500-italic.woff2) format("woff2");unicode-range:U+0400-045F}
+@font-face{font-family:Corm;font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Corm;font-style:italic;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-600-italic.woff2) format("woff2");unicode-range:U+0400-045F}
+@font-face{font-family:Corm;font-style:italic;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+2116}
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Golos;font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+2116}
+@font-face{font-family:Golos;font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Golos;font-weight:600;font-display:swap;src:url(fonts/golos-text-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+2116}
+@font-face{font-family:Golos;font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+
+:root{
+  --court:#E0521F; --court-2:#C94418;
+  --ember:#8E2A12; --teal:#0D2B33; --jersey:#3FB4DA;
+  --wine:#6E1A1C; --ice:#E5EDEF; --cream:#FFF4EA; --ink:#0D2B33;
+  --u:min(1vw,1.414svh);
+  --pad:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--teal);color:var(--cream);font-family:Golos,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--jersey);outline-offset:3px;border-radius:6px}
+.h{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:uppercase;line-height:.86;letter-spacing:-.005em}
+.it{font-family:Corm,Georgia,serif;font-style:italic;font-weight:500;line-height:.95}
+.wrap{width:min(1280px,100% - var(--pad)*2);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+section{position:relative}
+
+/* ─── шапка ─── */
+.top{position:fixed;z-index:50;top:0;left:0;right:0;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;transition:background .35s,padding .35s,box-shadow .35s}
+.top.solid{background:rgba(13,43,51,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-block:10px;box-shadow:0 1px 0 rgba(255,244,234,.08)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.brand i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--cream);color:#A8330F;font-family:Oswald;font-weight:700;font-size:14px}
+.menu{display:flex;gap:2px;padding:4px;border-radius:99px;background:rgba(10,20,24,.3);font-size:13.5px}
+.menu a{padding:7px 14px;border-radius:99px;opacity:.85;transition:background .25s,color .25s,opacity .25s}
+.menu a:hover{opacity:1;background:rgba(255,244,234,.12)}
+.menu a.on{background:var(--cream);color:var(--ink);opacity:1}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:99px;background:var(--cream);color:var(--ink);font-weight:600;font-size:14px;transition:transform .25s}
+.pill:hover{transform:translateY(-2px)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,244,234,.6);place-items:center}
+.burger span{display:block;width:16px;height:1.5px;background:var(--cream);box-shadow:0 5px 0 var(--cream);transform:translateY(-2.5px);transition:transform .3s,box-shadow .3s}
+.open .burger span{box-shadow:none;transform:rotate(45deg)}
+.open .burger span::after{content:"";display:block;width:16px;height:1.5px;background:var(--cream);transform:rotate(-90deg)}
+.drawer{position:fixed;inset:0;z-index:45;background:var(--teal);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:90px var(--pad) 40px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.drawer a{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(38px,11vw,64px);line-height:1.05}
+.open .drawer{transform:none}
+
+/* ─── 1. hero ─── */
+.hero{min-height:100svh;overflow:hidden;color:var(--cream);
+  background:radial-gradient(60% 75% at 52% 60%,rgba(242,122,64,1) 0%,rgba(242,122,64,0) 70%),linear-gradient(180deg,var(--court) 0%,#C94418 75%,#B53A13 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.stage{position:relative;margin-inline:auto;width:calc(var(--u)*100);height:100svh;min-height:calc(var(--u)*62)}
+.hero .line{position:absolute;left:0;right:0;bottom:18.5%;height:2px;background:rgba(255,244,234,.35)}
+.name{position:absolute;z-index:1;left:calc(var(--u)*4.7);top:calc(var(--u)*11)}
+.name .row{display:block;overflow:hidden;font-size:calc(var(--u)*14.1);padding-bottom:.02em}
+.name .row+.row{margin-top:calc(var(--u)*.5)}
+.ch{display:inline-block;will-change:transform}
+.mask{display:block;overflow:hidden;padding-bottom:.05em;margin-bottom:-.05em}
+.ball{position:absolute;z-index:3;left:calc(var(--u)*46.5);top:calc(var(--u)*7.5);width:calc(var(--u)*7.2);filter:drop-shadow(0 10px 14px rgba(70,15,0,.35));will-change:transform}
+.roma{position:absolute;z-index:2;left:calc(var(--u)*24);bottom:0;height:min(calc(var(--u)*45),82svh);width:auto;filter:drop-shadow(0 18px 24px rgba(70,15,0,.3));will-change:transform}
+.achs{position:absolute;z-index:3;right:calc(var(--u)*4.7);top:calc(var(--u)*20);width:calc(var(--u)*23.5);display:grid;gap:calc(var(--u)*1.1)}
+.ach{display:flex;gap:12px;align-items:center;padding:9px;border-radius:14px;background:rgba(255,244,234,.14);border:1px solid rgba(255,244,234,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.ach img{width:calc(var(--u)*8);height:calc(var(--u)*8);min-width:64px;min-height:64px;object-fit:cover;border-radius:10px;flex:none}
+.ach b{display:block;font-family:Oswald;font-weight:500;font-size:clamp(15px,calc(var(--u)*1.5),22px);line-height:1.1}
+.ach small{display:inline-block;margin-top:7px;font-size:12px;line-height:1.3;padding:3px 10px;border-radius:99px;background:var(--cream);color:#B23A12;font-weight:600}
+.tag{position:absolute;z-index:3;left:calc(var(--u)*5.3);bottom:7%;font-size:clamp(26px,calc(var(--u)*3.2),46px)}
+.meta{position:absolute;z-index:3;right:calc(var(--u)*4.7);bottom:7%;text-align:right;font-size:13px;line-height:1.5;color:#FFE3D3}
+.cue{position:absolute;z-index:3;left:50%;bottom:16px;transform:translateX(-50%);width:26px;height:40px;border:1.5px solid rgba(255,244,234,.6);border-radius:99px}
+.cue::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--cream);animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+/* ─── 2. о Романе ─── */
+.about{background:radial-gradient(70% 90% at 78% 70%,#F4F8F9 0%,rgba(244,248,249,0) 70%),var(--ice);color:var(--ink);padding:clamp(90px,12vw,150px) 0 0;overflow:hidden}
+.about .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end}
+.ttl .b{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(46px,6.4vw,92px);line-height:.9}
+.ttl .a{font-family:Corm;font-style:italic;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1}
+.about .lede{margin-top:34px;max-width:58ch;font-size:clamp(16px,1.3vw,18px)}
+.about .lede p+p{margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 clamp(40px,6vw,80px)}
+.chips div{background:#fff;border-radius:14px;padding:12px 18px;box-shadow:0 8px 24px rgba(13,43,51,.07)}
+.chips small{display:block;font-size:12px;color:#5B7178}
+.chips b{font-family:Oswald;font-weight:500;font-size:19px;text-transform:uppercase;letter-spacing:.01em}
+.about .fig{position:relative;justify-self:end}
+.about .fig .pf{height:min(78vh,720px);width:auto}
+.about .note{position:absolute;right:0;top:12%;display:flex;gap:12px;align-items:center;background:#fff;border-radius:16px;padding:10px 16px 10px 10px;box-shadow:0 12px 30px rgba(13,43,51,.12)}
+.about .note img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.about .note b{font-family:Oswald;font-weight:500;font-size:20px;display:block;line-height:1.1}
+.about .note small{font-size:12px;color:#5B7178;display:block;max-width:20ch;line-height:1.35;margin-top:3px}
+
+/* ─── 3. цифры ─── */
+.nums{position:relative;isolation:isolate;background:radial-gradient(45% 70% at 50% 62%,rgba(194,75,34,1) 0%,rgba(194,75,34,0) 72%),linear-gradient(180deg,#A3361A,var(--ember));overflow:hidden}
+.nums::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.nums .pin{position:relative;margin-inline:auto;width:calc(var(--u)*100);height:100svh;min-height:calc(var(--u)*62)}
+.nums .L,.nums .R{position:absolute;z-index:1}
+.nums .L{left:calc(var(--u)*11);top:calc(var(--u)*11)}
+.nums .R{right:calc(var(--u)*6.5);top:calc(var(--u)*27);text-align:right;z-index:1}
+.nums .big{display:block;font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:calc(var(--u)*14);line-height:.84}
+.nums .ser{display:block;font-family:Corm;font-style:italic;font-weight:500;font-size:calc(var(--u)*4.6);line-height:.95}
+.nums .why{display:inline-block;margin-top:calc(var(--u)*1.6);max-width:34ch;font-size:clamp(14px,calc(var(--u)*1.25),19px);line-height:1.45;color:#FFE3D3;text-align:right}
+.nums .cutw{position:absolute;z-index:2;left:0;right:0;margin-inline:auto;bottom:0;height:min(calc(var(--u)*43),62svh);width:fit-content}
+.nums .cut{display:block;height:100%;width:auto}
+.nums .nball{position:absolute;left:90.6%;top:-46.9%;width:51.5%;max-width:none;filter:drop-shadow(0 8px 12px rgba(40,5,0,.35))}
+.stats{position:absolute;z-index:3;left:calc(var(--u)*4.7);right:calc(var(--u)*4.7);bottom:7%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2.4)}
+.stat b{display:block;font-family:Oswald;font-weight:500;font-size:clamp(24px,calc(var(--u)*2.5),40px);line-height:1;text-transform:uppercase}
+.stat>span{display:block;font-size:14px;line-height:1.45;color:#FFD7C4;margin-top:8px;max-width:26ch}
+.stat:nth-child(n+3)>span{margin-left:auto}
+.stat:nth-child(n+3){text-align:right}
+
+/* ─── 4. путь ─── */
+.path{background:var(--teal);padding:clamp(80px,9vw,120px) 0;position:relative;overflow:hidden;isolation:isolate}
+.yrs{position:absolute;z-index:-1;right:-2vw;top:50%;transform:translateY(-50%);font-family:Oswald;font-weight:700;font-size:clamp(110px,15vw,280px);line-height:1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(63,180,218,.28)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px);align-items:center}
+.path .ttl .a{color:var(--jersey);margin-left:.4em}
+.tl{list-style:none;position:relative;padding-left:30px;margin-top:28px}
+.tl::before{content:"";position:absolute;left:5px;top:12px;bottom:12px;width:2px;background:var(--jersey);opacity:.55}
+.tl li{position:relative;padding:11px 0;border-bottom:1px solid rgba(255,244,234,.1);display:grid;grid-template-columns:clamp(70px,6.5vw,96px) 1fr;gap:14px;align-items:baseline}
+.tl li:last-child{border-bottom:0}
+.tl li::before{content:"";position:absolute;left:-30px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2px solid var(--jersey)}
+.tl li:last-child::before{background:var(--jersey)}
+.tl .y{font-family:Corm;font-style:italic;font-weight:600;font-size:clamp(28px,2.6vw,38px);line-height:1;color:var(--jersey)}
+.tl p{color:#CFE0E4;margin:0;font-size:16px;line-height:1.5;max-width:44ch}
+.tl p b{color:var(--cream);font-weight:600}
+.pphoto{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.pphoto img{width:100%;height:100%;object-fit:cover}
+.pwrap{position:relative}
+.pcap2{position:absolute;z-index:2;left:-28px;bottom:36px;font-size:14px;font-weight:600;background:var(--cream);color:var(--ink);padding:12px 18px;border-radius:14px;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+
+/* ─── 5. связующий / 6. логика: фото во весь экран ─── */
+.full{min-height:100svh;overflow:hidden;display:flex;align-items:flex-end}
+.full .bg{position:absolute;inset:-12% 0;z-index:0}
+.full .bg img{width:100%;height:100%;object-fit:cover}
+.full .shade{position:absolute;inset:0;z-index:1}
+.full .in{position:relative;z-index:2;padding:clamp(110px,14vh,160px) 0 clamp(50px,8vh,90px)}
+.setter{background:radial-gradient(55% 75% at 30% 65%,#FFFDF8 0%,rgba(255,253,248,0) 70%),#F3EBDD;color:var(--ink);overflow:hidden;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding-top:clamp(60px,7vw,90px)}
+.courtw{position:absolute;inset:0;z-index:-1;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.court{width:min(700px,44vw);height:auto;margin-right:min(700px,44vw)}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px);align-items:end;width:min(1400px,100% - var(--pad)*2)}
+.sfig{align-self:end;justify-self:center}
+.sfig img{height:min(calc(100svh - 190px),820px);width:auto;display:block}
+.stxt{align-self:center;padding:10px 0 40px}
+.setter .ttl .a{color:var(--court);margin-left:.5em}
+.setter .ttl .b{font-size:clamp(54px,7.4vw,124px)}
+.setter .ttl .a{font-size:clamp(40px,5.2vw,84px)}
+.setter .lead{font-family:Corm;font-style:italic;font-size:clamp(24px,2.3vw,34px);line-height:1.25;max-width:24ch;margin-top:36px}
+.setter p.txt{max-width:52ch;color:#3E5960;margin-top:22px}
+.logic{position:relative;isolation:isolate;overflow:hidden;color:var(--cream);background:radial-gradient(60% 75% at 72% 55%,#24396E 0%,rgba(36,57,110,0) 70%),#14234A;padding:clamp(80px,9vw,120px) 0}
+.lgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,4vw,70px);align-items:center;width:min(1400px,100% - var(--pad)*2)}
+.logic .ttl .a{color:#F2763A;margin-left:.5em}
+.logic .items{margin-top:34px}
+.logic .item{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.logic .item p{color:#DCE4F2}
+.logic .item b{color:#F2763A}
+.lfig{position:relative}
+.scene{position:relative;aspect-ratio:1481/1284;width:100%}
+.mroma{position:absolute;left:43.7%;top:0;width:32%;height:auto;filter:drop-shadow(0 16px 24px rgba(5,10,30,.4))}
+.mbikes{position:absolute;left:0;bottom:0;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(5,10,30,.5))}
+.lfig .fam{position:absolute;left:-6%;bottom:-4%;max-width:380px;background:var(--cream);color:var(--ink);box-shadow:0 20px 40px rgba(5,10,30,.4)}
+.lfig .fam p{color:#3E5960}
+.items{display:grid;gap:12px}
+.item{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 20px;border-radius:16px;background:rgba(255,244,234,.08);border:1px solid rgba(255,244,234,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.item b{font-family:Oswald;font-weight:500;font-size:18px;text-transform:uppercase;color:var(--jersey)}
+.item p{font-size:15px;line-height:1.5;color:#DCE7EA}
+.fam{background:var(--cream);color:var(--ink);border-radius:18px;padding:24px 26px}
+.fam .it{display:block;font-size:30px;color:var(--court);margin-bottom:10px}
+.fam p{font-size:15px;line-height:1.55}
+
+/* ─── 7. характер ─── */
+.char{background:radial-gradient(55% 80% at 70% 60%,rgba(142,38,40,1) 0%,rgba(142,38,40,0) 70%),linear-gradient(180deg,#7A1D1F,#561214);overflow:hidden;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding-top:clamp(60px,7vw,90px)}
+.courtw{position:absolute;inset:0;z-index:-1;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.court{width:min(700px,44vw);height:auto;margin-right:min(700px,44vw)}
+.char .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;width:min(1400px,100% - var(--pad)*2)}
+.char .grid>div:first-child{align-self:center;padding:20px 0 48px;position:relative;z-index:1}
+.words>span{display:block;font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(56px,8.6vw,150px);line-height:.92}
+.char .txt{font-family:Corm;font-style:italic;font-size:clamp(20px,1.7vw,24px);line-height:1.35;color:#FBE3DC;max-width:36ch;position:relative;z-index:3;margin-top:34px}
+.char .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:40px 0 0;position:relative;z-index:3;max-width:640px}
+.char .card{display:flex;gap:12px;align-items:center;padding:10px;border-radius:14px;background:rgba(255,244,234,.12);border:1px solid rgba(255,244,234,.22)}
+.char .card img{width:56px;height:62px;object-fit:cover;border-radius:9px;flex:none}
+.char .card b{display:block;font-family:Oswald;font-weight:500;font-size:16px;text-transform:uppercase}
+.char .card small{display:block;font-size:12px;line-height:1.35;color:#F5D5CD;margin-top:2px}
+.char .fig{justify-self:start;margin-left:-14vw;position:relative;z-index:2}
+.char .fig img{height:min(calc(100svh - 110px),1000px);width:auto}
+
+
+/* ─── 9. награды ─── */
+.awards{background:var(--ice);color:var(--ink);padding:clamp(80px,8vw,110px) 0;position:relative;overflow:hidden;isolation:isolate}
+.awards .wrap{width:min(1400px,100% - var(--pad)*2)}
+.awards .ttl .a{color:var(--court);margin-left:.4em}
+.awards .intro{max-width:60ch;margin-top:18px;color:#4E656C}
+.docs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:28px clamp(14px,1.6vw,24px);margin-top:clamp(28px,4vh,48px);align-items:start}
+
+.docs .wide{grid-column:span 2}
+.doc{display:block;text-align:left;width:100%}
+.doc .img{display:block;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(13,43,51,.12);transition:transform .3s,box-shadow .3s}
+.doc:hover .img{transform:translateY(-4px);box-shadow:0 16px 34px rgba(13,43,51,.18)}
+.doc img{width:100%;height:auto}
+.doc b{display:block;font-size:14px;margin-top:12px;font-weight:600}
+.doc small{display:block;font-size:13px;line-height:1.4;color:#4E656C}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(7,26,32,.92);display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s}
+.lb.show{opacity:1;pointer-events:auto}
+.lb img{max-height:86vh;max-width:min(92vw,1000px);width:auto;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,.4);transform:scale(.96);transition:transform .3s}
+.lb.show img{transform:none}
+.lb .x{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;background:var(--cream);color:var(--ink);font-size:24px;line-height:1}
+.lb p{position:absolute;left:0;right:0;bottom:18px;text-align:center;font-size:14px;color:#CFE0E4}
+
+/* ─── 10. контакты ─── */
+.contact{background:radial-gradient(50% 70% at 72% 60%,rgba(242,122,64,1) 0%,rgba(242,122,64,0) 70%),linear-gradient(180deg,var(--court) 0%,#C94418 80%,#B53A13 100%);overflow:hidden;color:var(--cream);position:relative;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;min-height:100svh;width:min(1400px,100% - var(--pad)*2);margin-inline:auto;align-items:end;padding-top:80px}
+.contact .left{align-self:center;padding:30px 0 50px;display:flex;flex-direction:column;justify-content:center}
+.contact .ttl .b{font-size:clamp(54px,7.5vw,120px)}
+.contact .ttl .a{color:var(--teal);margin-left:.5em;font-size:clamp(40px,5.6vw,90px)}
+.contact .note{font-size:18px;margin:36px 0 26px;max-width:40ch}
+.cts{display:grid;gap:12px;max-width:560px}
+.ct{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--teal);border-radius:99px;padding:10px 10px 10px 26px;transition:background-color .25s}
+.ct:hover{background:#123843}
+.ct small{display:block;font-size:12px;color:#9FC3CC}
+.ct strong{display:block;font-weight:500;font-size:16px}
+.ct em{font-style:normal;font-family:Oswald;font-weight:500;font-size:clamp(17px,1.6vw,22px);background:var(--cream);color:var(--teal);padding:10px 20px;border-radius:99px;white-space:nowrap}
+.contact .dl{transition:none}
+.dls{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.dls .dl{margin-top:0}
+.dl{margin-top:26px;align-self:flex-start;background:transparent;color:var(--cream);border:1.5px solid rgba(255,244,234,.7)}
+.cfig{justify-self:start;padding-left:4vw}
+.cw{position:relative}
+.cball{position:absolute;left:21.24%;top:0;width:42.92%;height:auto;filter:drop-shadow(0 12px 16px rgba(70,15,0,.35))}
+.cfig .cbody{height:min(calc(100svh - 100px),1000px);width:auto;display:block;filter:drop-shadow(0 18px 24px rgba(70,15,0,.3))}
+
+/* ─── начальные состояния анимаций (только при JS и без «уменьшить движение») ─── */
+
+
+/* ─── адаптив ─── */
+@media (max-width:1060px){
+  .char .fig{margin-left:0;justify-self:center}
+  .awards .wrap{width:min(1280px,100% - var(--pad)*2)}
+  .docs{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .menu{display:none}
+  .burger{display:grid}
+  .top .pill{display:none}
+  .about .grid,.char .grid,.path .grid{grid-template-columns:1fr}
+  .about .fig{justify-self:center}
+  .pgrid{grid-template-columns:1fr}
+  .pwrap{max-width:560px;width:100%;margin-inline:auto}
+  .pcap2{left:12px;bottom:12px;font-size:12.5px;padding:7px 12px}
+  .yrs{display:none}
+  .lgrid{grid-template-columns:1fr}
+  .lfig .fam{position:relative;left:auto;bottom:auto;max-width:none;margin-top:16px}
+}
+@media (max-width:760px){
+  .courtw{display:none}
+  .sgrid{grid-template-columns:1fr}
+  .sfig{order:2}
+  .sfig img{height:auto;width:78vw;max-width:420px}
+  .setter{min-height:0}
+  .stxt{padding-bottom:30px}
+  body{font-size:16px}
+  .stage{width:100%;height:auto;min-height:0;display:flex;flex-direction:column;padding:96px var(--pad) 28px}
+  .name,.ball,.roma,.achs,.tag,.meta{position:relative;left:auto;right:auto;top:auto;bottom:auto}
+  .name .row{font-size:21.5vw}
+  .ball{position:absolute;right:var(--pad);top:96px;left:auto;width:19vw}
+  .roma{order:2;height:auto;width:92%;margin:-15vw auto 0;align-self:center}
+  .achs{order:3;width:100%;margin-top:-34px;gap:10px}
+  .ach img{width:64px;height:64px}
+  .tag{order:4;margin-top:28px}
+  .meta{order:5;text-align:left;margin-top:8px}
+  .hero .line,.cue{display:none}
+  .about .fig .pf{height:auto;width:100%}
+  .about .note{right:auto;left:0;top:auto;bottom:24px}
+  .nums::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.nums .pin{height:auto;min-height:0;padding:110px 0 30px;display:flex;flex-direction:column}
+  .nums .L,.nums .R,.nums .cutw,.stats{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none}
+  .nums .L{padding-inline:var(--pad)}
+  .nums .R{padding-inline:var(--pad);margin-top:10px}
+  .nums .cutw{height:52vh;margin:calc(52vh*.5) auto 0}
+  .nums::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(0deg,#000 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
+.nums .pin{width:100%}
+  .nums .big{font-size:17vw}
+  .nums .ser{font-size:9vw}
+  .stats{gap:22px 16px}
+    .stats{grid-template-columns:1fr 1fr;padding-inline:var(--pad);margin-top:30px}
+  .stat:nth-child(n+3){text-align:left}
+  .item{grid-template-columns:1fr;gap:6px}
+  .char .cards{grid-template-columns:1fr}
+  .char .fig img{height:auto;width:80%;margin-inline:auto}
+  .char{min-height:0}
+  .char .cards{margin-bottom:30px}
+  .docs{grid-template-columns:1fr 1fr}
+  .awards{min-height:0;display:block;padding:90px 0}
+  .awards .wrap{width:min(1280px,100% - var(--pad)*2)}
+  .docs .img{max-height:none}
+  .contact .grid{grid-template-columns:1fr}
+  .cfig .cbody{height:62vh}
+  .cfig{justify-self:center;padding-left:0}
+  .contact .grid{padding-top:90px;min-height:0}
+  .contact .left{padding-bottom:20px}
+  .ct{flex-direction:column;align-items:flex-start;border-radius:22px;padding:16px 16px 14px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .cue::after{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#hero"><i>РШ</i><span>Роман Шулегин</span></a>
+  <nav class="menu" aria-label="Разделы">
+    <a href="#about">О Романе</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a>
+  </nav>
+  <a class="pill" href="#contact">Связаться</a>
+  <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer"><span></span></button>
+</header>
+<nav class="drawer" id="drawer" aria-label="Разделы">
+  <a href="#about">О Романе</a><a href="#nums">Спорт</a><a href="#path">Путь</a><a href="#setter">Связующий</a><a href="#logic">Логика</a><a href="#char">Характер</a><a href="#awards">Достижения</a><a href="#contact">Контакты</a>
+</nav>
+
+<main>
+<!-- 1 -->
+<section class="hero" id="hero">
+  <div class="stage">
+    <h1 class="name h" aria-label="Роман Шулегин"><span class="row" aria-hidden="true">Роман</span><span class="row" aria-hidden="true">Шулегин</span></h1>
+    <div class="line"></div>
+    <img class="ball" src="img/ball-240.webp" width="236" height="236" alt="">
+    <img class="roma" src="img/roma-1300.webp" srcset="img/roma-700.webp 676w, img/roma-1300.webp 1256w" sizes="(max-width:760px) 92vw, 45vw" width="1256" height="1300" alt="Роман в прыжке подаёт мяч" fetchpriority="high">
+    <div class="achs">
+      <div class="ach"><img src="img/cups-thumb.webp" width="200" height="200" alt=""><div><b>Лучший игрок команды</b><small>награждался 7 раз</small></div></div>
+      <div class="ach"><img src="img/draft-thumb.webp" width="200" height="200" alt=""><div><b>Призёр всероссийских соревнований</b><small>2 раза, пляжный волейбол</small></div></div>
+      <div class="ach"><img src="img/s7-thumb.webp" width="200" height="200" alt=""><div><b>Победитель международной олимпиады</b><small>по логике и математике</small></div></div>
+    </div>
+    <p class="tag it">Спорт и точный расчёт</p>
+    <p class="meta">Волейбол, связующий<br>Санкт-Петербург</p>
+    <a class="cue" href="#about" aria-label="Листать вниз"></a>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div>
+      <h2 class="ttl rv"><span class="b" style="display:block">О Романе</span><span class="a" style="display:block">коротко и по делу</span></h2>
+      <div class="lede rv">
+        <p>Роман — связующий, игрок, который управляет атакой команды. В спортивной школе с 2021 года, неоднократный победитель и призёр турниров, дважды призёр всероссийских соревнований по пляжному волейболу. Победитель международной олимпиады по логике и математике.</p>
+        <p>В свободное время — шахматы, техника и всё, что можно разобрать и понять, как оно устроено. Стремится учиться там, где спорт и точные науки развиваются вместе.</p>
+      </div>
+      <div class="chips rv">
+        <div><small>Дата рождения</small><b>03.06.2014</b></div>
+        <div><small>Школа</small><b>№ 43, 5 класс</b></div>
+        <div><small>Город</small><b>Санкт-Петербург</b></div>
+        <div><small>Гражданство</small><b>РФ</b></div>
+        <div><small>Амплуа</small><b>Связующий</b></div>
+        <div><small>Спортшкола</small><b>с 2021 года</b></div>
+      </div>
+    </div>
+    <div class="fig">
+      <img class="pf" src="img/portrait2-1100.webp" srcset="img/portrait2-640.webp 471w, img/portrait2-1100.webp 810w" sizes="(max-width:760px) 100vw, 40vw" width="810" height="1100" alt="Роман на пляжном турнире" loading="lazy">
+      <div class="note rv"><img src="img/beachset-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Связующий</b><small>амплуа в классическом и пляжном волейболе</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="nums" id="nums">
+  <div class="pin">
+    <div class="L"><span class="big">Лучший</span></div>
+    <div class="R"><span class="big">игрок</span><span class="ser">команды</span><span class="why">7 раз получал награду «Лучший игрок команды» на турнирах</span></div>
+<div class="cutw"><img class="nball" src="img/beachball-240.webp" width="240" height="240" alt=""><img class="cut" src="img/set2-1100.webp" srcset="img/set2-650.webp 157w, img/set2-1100.webp 265w" sizes="(max-width:760px) 46vw, 20vw" width="265" height="1100" alt="Роман в передаче на песке" loading="lazy"></div>
+    <div class="stats">
+      <div class="stat"><b>Призёр</b><span>всероссийских соревнований по пляжному волейболу — дважды</span></div>
+      <div class="stat"><b>Более 5 лет</b><span>в спортивной школе: классический и пляжный волейбол</span></div>
+      <div class="stat"><b>Победитель</b><span>турниров в составе команды — неоднократно</span></div>
+      <div class="stat"><b>Выездные турниры</b><span>Санкт-Петербург, Вологда, Великий Новгород, Калининградская область</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="path" id="path">
+  <div class="yrs" aria-hidden="true">2020—2026</div>
+  <div class="wrap pgrid">
+    <div class="pleft">
+      <h2 class="ttl"><span class="b" style="display:block">Путь</span><span class="a" style="display:block">сезон за сезоном</span></h2>
+      <ol class="tl">
+        <li><div class="y">2020</div><p>Впервые взял в руки волейбольный мяч</p></li>
+        <li><div class="y">2021</div><p>Поступил в спортивную школу</p></li>
+        <li><div class="y">2022</div><p>Первая награда «Лучший игрок команды»</p></li>
+        <li><div class="y">2024</div><p>3-е место, турнир «Зимние встречи»</p></li>
+        <li><div class="y">2025</div><p><b>1-е место</b>, «ВоллейТайм», Вологда<br><b>1-е место</b>, кубок Saint Volleyball, Санкт-Петербург<br>3-е место, «Осенний кубок»</p></li>
+        <li><div class="y">2026</div><p><b>3-е место</b>, всероссийский турнир «Юниор Драфт»<br><b>3-е место</b>, всероссийский фестиваль «У стен Новгородского Кремля»</p></li>
+      </ol>
+    </div>
+    <div class="pwrap"><figure class="pphoto"><img src="img/podiumsq-960.webp" srcset="img/podiumsq-600.webp 600w, img/podiumsq-960.webp 943w" sizes="(max-width:1060px) 100vw, 45vw" width="943" height="943" alt="Роман с командой на первой ступени пьедестала" loading="lazy"></figure><p class="pcap2">1-е место, «ВоллейТайм», Вологда, 2025</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="setter" id="setter">
+  <div class="courtw" aria-hidden="true"><svg class="court" viewBox="-10 -50 960 1000" fill="none">
+    <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#E0521F"/></marker></defs>
+    <g stroke="#0D2B33" stroke-opacity=".16" stroke-width="3">
+      <path d="M900 4H4V896H900"/>
+      <line x1="900" y1="-40" x2="900" y2="940" stroke-width="7" stroke-opacity=".2"/>
+      <line x1="600" y1="4" x2="600" y2="896"/>
+    </g>
+    <g font-family="Oswald" font-weight="700" font-size="96" fill="#0D2B33" fill-opacity=".09" text-anchor="middle">
+      <text x="750" y="185">4</text><text x="750" y="485">3</text><text x="750" y="785">2</text>
+      <text x="300" y="185">5</text><text x="300" y="485">6</text><text x="300" y="785">1</text>
+    </g>
+    <g stroke="#E0521F" stroke-opacity=".5" stroke-width="4" stroke-dasharray="14 14" marker-end="url(#ah)">
+      <path d="M330 470 Q 560 640 790 585"/>
+      <path d="M810 560 Q 720 240 770 150"/>
+      <path d="M830 600 Q 900 720 820 770" stroke-opacity=".3"/>
+    </g>
+    <g fill="#0D2B33" fill-opacity=".14"><circle cx="300" cy="450" r="26"/><circle cx="760" cy="150" r="26"/><circle cx="760" cy="780" r="26"/><circle cx="300" cy="150" r="26"/><circle cx="300" cy="780" r="26"/></g>
+    <circle cx="805" cy="580" r="32" fill="#E0521F" fill-opacity=".75"/>
+    <text x="805" y="596" font-family="Oswald" font-weight="700" font-size="44" fill="#FFF4EA" text-anchor="middle">С</text>
+  </svg></div>
+  <div class="wrap sgrid">
+    <div class="sfig"><img class="sc" src="img/setter-1300.webp" srcset="img/setter-760.webp 460w, img/setter-1300.webp 788w" sizes="(max-width:760px) 80vw, 34vw" width="788" height="1300" alt="Роман с мячом перед подачей" loading="lazy"></div>
+    <div class="stxt">
+      <h2 class="ttl"><span class="b" style="display:block">Связующий</span><span class="a" style="display:block">мозг команды</span></h2>
+      <p class="lead">Связующий касается мяча почти в каждом розыгрыше — и каждый раз решает, как команда будет атаковать.</p>
+      <p class="txt">За доли секунды он оценивает расстановку соперника, положение своих нападающих и выбирает лучший вариант атаки. Это игра на расчёт, точность и предвидение. Именно поэтому Роману так близки логика и точные науки.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="logic" id="logic">
+  <div class="wrap lgrid">
+    <div class="lleft">
+      <h2 class="ttl"><span class="b" style="display:block">Инженерный</span><span class="a" style="display:block">склад ума</span></h2>
+      <div class="items">
+        <div class="item"><b>Олимпиады</b><p>Победитель международной олимпиады по логике и математике (диплом 1-й степени), призёр (диплом 2-й степени).</p></div>
+        <div class="item"><b>Шахматы</b><p>Увлекается шахматами и логическими задачами: любит просчитывать ходы наперёд — так же, как на площадке.</p></div>
+        <div class="item"><b>Техника</b><p>Разбирается в устройстве и обслуживании мототехники, любит понять, как всё работает изнутри.</p></div>
+      </div>
+    </div>
+    <div class="lfig">
+      <div class="scene">
+        <img class="mroma" src="img/mroma-620.webp" srcset="img/mroma-360.webp 360w, img/mroma-620.webp 620w" sizes="(max-width:760px) 32vw, 16vw" width="620" height="1192" alt="Роман в мотоэкипировке" loading="lazy">
+        <img class="mbikes" src="img/bikes-1300.webp" srcset="img/bikes-760.webp 760w, img/bikes-1300.webp 1300w" sizes="(max-width:760px) 100vw, 50vw" width="1300" height="1002" alt="Два питбайка" loading="lazy">
+      </div>
+      <div class="fam"><span class="it">Инженерная семья</span><p>Отец и оба старших брата — с техническим образованием. Отец в прошлом преподавал физику, братья работают инженером ПТО и инженером машинного обучения.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="char" id="char">
+  <div class="wrap grid">
+    <div>
+      <h2 class="words" aria-label="Думает. Решает. Побеждает."><span>Думает.</span><span>Решает.</span><span>Побеждает.</span></h2>
+      <p class="txt">Лидер на площадке и надёжный партнёр вне её. Хладнокровен в напряжённые моменты, после поражений разбирает ошибки, а не ищет оправданий. Ему интересно не просто «как сделать», а «почему это работает».</p>
+      <div class="cards">
+        <div class="card rv"><img src="img/inset-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Спорт</b><small>спортшкола и выезды на турниры в другие города</small></div></div>
+        <div class="card rv"><img src="img/s6-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Учёба</b><small>грамота школы за успешную учёбу</small></div></div>
+        <div class="card rv"><img src="img/moto-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Увлечения</b><small>шахматы, техника и мото</small></div></div>
+      </div>
+    </div>
+    <div class="fig"><img class="dg" src="img/dig-1150.webp" srcset="img/dig-650.webp 296w, img/dig-1150.webp 523w" sizes="(max-width:760px) 80vw, 30vw" width="523" height="1150" alt="Роман принимает мяч" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="awards" id="awards">
+  <div class="wrap">
+    <h2 class="ttl rv"><span class="b">Достижения</span><span class="a">дипломы и грамоты</span></h2>
+    <div class="docs">
+      <button class="doc rv" data-full="img/s1-900.webp"><span class="img"><img src="img/s1-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>Всероссийский фестиваль «У стен Новгородского Кремля», 2026</small></button>
+      <button class="doc rv" data-full="img/s3-900.webp"><span class="img"><img src="img/s3-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>«Кубок Фёдорова», Калининградская обл.</small></button>
+      <button class="doc rv" data-full="img/s4-900.webp"><span class="img"><img src="img/s4-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>«Осенний кубок — 2025»</small></button>
+      <button class="doc rv" data-full="img/s2-900.webp"><span class="img"><img src="img/s2-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>3-е место</b><small>«Зимние встречи — 2024»</small></button>
+      <button class="doc rv" data-full="img/s10-900.webp"><span class="img"><img src="img/s10-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Лучший игрок</b><small>«Осенний кубок — 2026»</small></button>
+      <button class="doc rv" data-full="img/s13-900.webp"><span class="img"><img src="img/s13-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Лучший игрок</b><small>«Февральские морозы — 2026»</small></button>
+      <button class="doc rv" data-full="img/s9-900.webp"><span class="img"><img src="img/s9-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Лучший игрок</b><small>«Зимние встречи — 2023»</small></button>
+      <button class="doc rv" data-full="img/s11-900.webp"><span class="img"><img src="img/s11-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Лучший игрок</b><small>«Осенний кубок — 2023»</small></button>
+      <button class="doc rv" data-full="img/s12-900.webp"><span class="img"><img src="img/s12-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Лучший игрок</b><small>«Новогодняя сказка», 2022</small></button>
+      <button class="doc rv" data-full="img/s6-900.webp"><span class="img"><img src="img/s6-360.webp" width="360" height="509" alt="" loading="lazy"></span><b>Грамота</b><small>За успешную учёбу, 2025</small></button>
+      <button class="doc wide rv" data-full="img/s7-900.webp"><span class="img"><img src="img/s7-360.webp" width="360" height="255" alt="" loading="lazy"></span><b>Диплом 1-й степени</b><small>Международная олимпиада по логике и математике</small></button>
+      <button class="doc wide rv" data-full="img/s8-900.webp"><span class="img"><img src="img/s8-360.webp" width="360" height="255" alt="" loading="lazy"></span><b>Диплом 2-й степени</b><small>Международная олимпиада по логике и математике</small></button>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="contact" id="contact">
+  <div class="grid">
+    <div class="left">
+      <h2 class="ttl rv"><span class="b h" style="display:block">Контакты</span><span class="a it" style="display:block">родителей</span></h2>
+      <p class="note rv">Спасибо, что познакомились с Романом! Ответим на любые вопросы.</p>
+      <div class="cts">
+        <a class="ct rv" href="tel:+79214483628"><span><small>Мама</small><strong>Шулегина Наталья Анатольевна</strong></span><em>+7 921 448-36-28</em></a>
+        <a class="ct rv" href="tel:+79119959561"><span><small>Папа</small><strong>Шулегин Андрей Викторович</strong></span><em>+7 911 995-95-61</em></a>
+      </div>
+      <div class="dls"><a class="pill dl" href="portfolio.pdf" download="Портфолио — Роман Шулегин.pdf">Скачать портфолио (PDF)</a><a class="pill dl" href="resume.pdf" download="Резюме — Шулегин Роман.pdf">Скачать резюме (PDF)</a></div>
+    </div>
+    <div class="cfig"><div class="cw"><img class="cbody" src="img/dig4-1300.webp" srcset="img/dig4-760.webp 262w, img/dig4-1300.webp 448w" sizes="(max-width:760px) 40vw, 25vw" width="448" height="1300" alt="Роман принимает мяч" loading="lazy"><img class="cball" src="img/mikasa-300.webp" width="300" height="298" alt=""></div></div>
+  </div>
+</section>
+</main>
+
+<div class="lb" role="dialog" aria-modal="true" aria-label="Документ" hidden>
+  <button class="x" aria-label="Закрыть">×</button>
+  <img alt="">
+  <p></p>
+</div>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<script>
+(function(){
+  var root=document.documentElement, body=document.body;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGsap=!!(window.gsap&&window.ScrollTrigger);
+
+  /* шапка: фон после первого экрана + подсветка раздела */
+  var top=document.getElementById('top');
+  var links=[].slice.call(document.querySelectorAll('.menu a'));
+  function onScroll(){
+    top.classList.toggle('solid',window.scrollY>window.innerHeight*0.6);
+    var cur=null;
+    links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s&&s.getBoundingClientRect().top<window.innerHeight*0.4)cur=a;});
+    links.forEach(function(a){a.classList.toggle('on',a===cur);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* мобильное меню */
+  var burger=document.querySelector('.burger');
+  function setMenu(open){body.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');}
+  burger.addEventListener('click',function(){setMenu(!body.classList.contains('open'));});
+  document.querySelectorAll('.drawer a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+
+  /* лайтбокс для грамот */
+  var lb=document.querySelector('.lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('p'), lastBtn=null;
+  function closeLb(){lb.classList.remove('show');setTimeout(function(){lb.hidden=true;},300);if(lastBtn)lastBtn.focus();}
+  document.querySelectorAll('.doc').forEach(function(b){
+    b.addEventListener('click',function(){
+      lastBtn=b;lbImg.src=b.dataset.full;lbImg.alt=b.querySelector('b').textContent+'. '+b.querySelector('small').textContent;
+      lbCap.textContent=lbImg.alt;lb.hidden=false;requestAnimationFrame(function(){lb.classList.add('show');});lb.querySelector('.x').focus();
+    });
+  });
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('x'))closeLb();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(!lb.hidden)closeLb();if(body.classList.contains('open'))setMenu(false);}});
+
+  if(!hasGsap||reduce)return;
+
+  root.classList.add('anim');
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* плавный скролл */
+  var lenis=new Lenis({lerp:0.1});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000);});
+  gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:0,duration:1.4});}});
+  });
+
+  /* имя по буквам */
+  document.querySelectorAll('.name .row').forEach(function(r){
+    r.innerHTML=r.textContent.split('').map(function(c){return '<span class="ch">'+c+'</span>';}).join('');
+  });
+
+  var mm=gsap.matchMedia();
+
+  /* ── загрузка первого экрана ── */
+  var intro=gsap.timeline({defaults:{ease:'power4.out'}});
+  intro.from('.name .ch',{yPercent:110,duration:1.1,stagger:0.035})
+       .from('.roma',{y:140,duration:1.2},0.25)
+       .from('.ball',{y:-window.innerHeight*0.6,rotation:-260,duration:1.25,ease:'bounce.out'},0.35)
+       .from('.ach',{x:60,opacity:0,duration:0.9,stagger:0.12},0.7)
+       .from('.tag,.meta,.hero .line',{opacity:0,y:20,duration:0.8},0.9);
+
+  mm.add('(max-width: 760px)',function(){
+    /* на телефоне мячи просто крутятся при прокрутке */
+    gsap.to('.ball',{rotation:300,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  });
+
+  mm.add('(min-width: 761px)',function(){
+    /* параллакс первого экрана */
+    gsap.to('.ball',{yPercent:-220,rotation:200,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    gsap.to('.roma',{yPercent:-12,scale:1.05,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    gsap.to('.name',{yPercent:30,opacity:.4,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+    /* «Спорт»: слои плывут с разной скоростью, текст всегда читается */
+    var nt={trigger:'.nums',start:'top bottom',end:'bottom top',scrub:true};
+    /* движение в пикселях, а не в % — не зависит от высоты текста */
+    gsap.fromTo('.nums .L',{y:-110},{y:110,ease:'none',scrollTrigger:nt});               /* «ЛУЧШИЙ» — дальний, отстаёт сильнее всех */
+    gsap.fromTo('.nums .R',{y:-35},{y:35,ease:'none',scrollTrigger:nt});                 /* «ИГРОК» — отстаёт чуть-чуть */
+    gsap.fromTo('.nums .cutw',{y:70,scale:.97},{y:-70,scale:1.03,transformOrigin:'50% 100%',ease:'none',scrollTrigger:nt}); /* Рома ближе */
+    gsap.fromTo('.nums .nball',{yPercent:60,rotation:-220},{yPercent:-90,rotation:360,ease:'none',scrollTrigger:nt});     /* мяч — самый быстрый */
+    gsap.fromTo('.stats',{y:90},{y:-90,ease:'none',scrollTrigger:nt});                   /* пункты подъезжают снизу */
+
+    /* «О Романе»: фото плывёт медленнее текста */
+    /* «О Романе»: пять слоёв */
+    var at={trigger:'.about',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.about .ttl',{yPercent:-30},{yPercent:30,ease:'none',scrollTrigger:at});          /* заголовок отстаёт */
+    gsap.fromTo('.about .pf',{yPercent:18,scale:.96},{yPercent:0,scale:1.04,ease:'none',transformOrigin:'50% 100%',scrollTrigger:at}); /* Рома ближе */
+    gsap.fromTo('.about .chips',{yPercent:45},{yPercent:-45,ease:'none',scrollTrigger:at});      /* плашки подъезжают снизу */
+    gsap.fromTo('.about .note',{yPercent:160,rotation:-4},{yPercent:-160,rotation:3,ease:'none',scrollTrigger:at}); /* карточка — самая быстрая */
+
+    /* фон-параллакс */
+    document.querySelectorAll('.full .bg').forEach(function(bg){
+      gsap.fromTo(bg,{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:bg.parentNode,start:'top bottom',end:'bottom top',scrub:true}});
+    });
+  });
+
+  /* ── по всему сайту только лёгкое движение при прокрутке, всё видно сразу ── */
+  mm.add('(min-width: 761px)',function(){
+    function drift(sel,trg,from,to){gsap.fromTo(sel,{yPercent:from},{yPercent:to,ease:'none',scrollTrigger:{trigger:trg,start:'top bottom',end:'bottom top',scrub:true}});}
+    /* «Путь»: пять слоёв */
+    var pt={trigger:'.path',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.yrs',{y:-160},{y:160,ease:'none',scrollTrigger:pt});                  /* «2020—2026» — самый дальний */
+    gsap.fromTo('.path .ttl',{y:-60},{y:60,ease:'none',scrollTrigger:pt});              /* заголовок отстаёт */
+    gsap.fromTo('.pwrap',{y:90,rotation:-3},{y:-90,rotation:2,ease:'none',scrollTrigger:pt}); /* фото ближе */
+    gsap.fromTo('.pcap2',{y:150,x:-20},{y:-150,x:10,ease:'none',scrollTrigger:pt});     /* плашка — самая быстрая */
+    /* «Контакты»: мяч отдельно */
+    var cc={trigger:'.contact',start:'top bottom',end:'bottom bottom',scrub:true};
+    gsap.fromTo('.contact .ttl .b',{y:-90},{y:0,ease:'none',scrollTrigger:cc});       /* КОНТАКТЫ — самый дальний */
+    gsap.fromTo('.contact .ttl .a',{y:-30,x:-50},{y:0,x:0,ease:'none',scrollTrigger:cc}); /* родителей — выезжает сбоку */
+    gsap.fromTo('.contact .note',{y:30},{y:0,ease:'none',scrollTrigger:cc});            /* текст */
+    var cts=document.querySelectorAll('.ct');
+    gsap.fromTo(cts[0],{y:50},{y:0,ease:'none',scrollTrigger:cc});                    /* мама */
+    gsap.fromTo(cts[1],{y:70},{y:0,ease:'none',scrollTrigger:cc});                    /* папа — быстрее */
+    gsap.fromTo('.contact .dls',{y:70},{y:0,ease:'none',scrollTrigger:cc});            /* кнопка — самая быстрая */
+    gsap.fromTo('.cbody',{y:120,scale:.96},{y:0,scale:1,transformOrigin:'50% 100%',ease:'none',scrollTrigger:cc}); /* Рома */
+    gsap.fromTo('.cball',{y:-200,x:-80,rotation:-240},{y:0,x:0,rotation:0,ease:'none',scrollTrigger:cc});        /* мяч прилетает в руки */
+
+    /* «Достижения»: волна грамот */
+    var aw={trigger:'.awards',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.awards .ttl',{y:-50},{y:50,ease:'none',scrollTrigger:aw});         /* заголовок отстаёт */
+    var docs=[].slice.call(document.querySelectorAll('.doc'));
+    var row1=docs[0].getBoundingClientRect().top;
+    docs.forEach(function(d,i){
+      var col=i<7?i:i-7, second=d.getBoundingClientRect().top-row1>40;
+      var amp=(second?110:60)+col*16, rot=(i%2?1.6:-1.6);
+      var t=gsap.timeline({scrollTrigger:{trigger:'.awards',start:'top bottom',end:'bottom top',scrub:true}});
+      t.fromTo(d,{y:amp,rotation:rot},{y:0,rotation:0,ease:'none',duration:1})      /* въезд: волна → ровная сетка */
+       .to(d,{y:-amp*.5,rotation:-rot*.4,ease:'none',duration:1});                /* выезд: снова расходятся */
+    });
+
+    /* «Логика»: Рома и байки — отдельные слои */
+    var lg={trigger:'.logic',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.logic .ttl',{y:-60},{y:60,ease:'none',scrollTrigger:lg});            /* заголовок отстаёт */
+    gsap.fromTo('.mroma',{y:30},{y:-30,ease:'none',scrollTrigger:lg});                 /* Рома — за байками */
+    gsap.fromTo('.mbikes',{y:100,scale:.97},{y:-70,scale:1.03,transformOrigin:'50% 100%',ease:'none',scrollTrigger:lg}); /* байки — ближе */
+    gsap.fromTo('.lfig .fam',{y:150},{y:-130,ease:'none',scrollTrigger:lg});           /* «Инженерная семья» — самая быстрая */
+
+    /* «Связующий»: пять слоёв */
+    var sg={trigger:'.setter',start:'top bottom',end:'bottom top',scrub:true};
+    gsap.fromTo('.court',{y:-140},{y:140,ease:'none',scrollTrigger:sg});                 /* схема — самая дальняя */
+    gsap.fromTo('.setter .ttl',{y:-60},{y:60,ease:'none',scrollTrigger:sg});            /* заголовок отстаёт */
+    gsap.fromTo('.sfig img',{y:110,scale:.97},{y:0,scale:1.03,transformOrigin:'50% 100%',ease:'none',scrollTrigger:sg}); /* Рома ближе */
+    gsap.fromTo('.setter .lead',{y:120},{y:-120,ease:'none',scrollTrigger:sg});         /* цитата — самая быстрая */
+    /* «Характер»: каждое слово — свой слой */
+    var ct={trigger:'.char',start:'top bottom',end:'bottom top',scrub:true};
+    var w=document.querySelectorAll('.words>span');
+    gsap.fromTo(w[0],{y:-130},{y:130,ease:'none',scrollTrigger:ct});   /* ДУМАЕТ — самый дальний */
+    gsap.fromTo(w[1],{y:-75},{y:75,ease:'none',scrollTrigger:ct});     /* РЕШАЕТ */
+    gsap.fromTo(w[2],{y:-25},{y:25,ease:'none',scrollTrigger:ct});     /* ПОБЕЖДАЕТ — ближний */
+    gsap.fromTo('.char .dg',{y:140,scale:.97},{y:0,scale:1.03,transformOrigin:'50% 100%',ease:'none',scrollTrigger:ct}); /* Рома */
+    gsap.fromTo('.char .cards',{y:130},{y:-130,ease:'none',scrollTrigger:ct});  /* карточки — самые быстрые */
+    document.querySelectorAll('.full .bg img').forEach(function(img){
+      gsap.fromTo(img,{scale:1.12},{scale:1,ease:'none',scrollTrigger:{trigger:img.closest('.full'),start:'top bottom',end:'top top',scrub:true}});
+    });
+  });
+
+  window.addEventListener('load',function(){ScrollTrigger.refresh();});
+})();
+</script>
+</body>
+</html>
