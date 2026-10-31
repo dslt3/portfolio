@@ -481,7 +481,7 @@ section{position:relative}
     </div>
     <div class="fig">
       <img class="pf" src="img/portrait2-1100.webp" srcset="img/portrait2-640.webp 471w, img/portrait2-1100.webp 810w" sizes="(max-width:760px) 100vw, 40vw" width="810" height="1100" alt="Роман на пляжном турнире" loading="lazy">
-      <div class="note rv"><img src="img/beachset-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Связующий</b><small>амплуа в классическом и пляжном волейболе</small></div></div>
+      <div class="note rv"><img src="img/setcard-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Связующий</b><small>амплуа в классическом волейболе</small></div></div>
     </div>
   </div>
 </section>
@@ -617,7 +617,7 @@ section{position:relative}
       <h2 class="words" aria-label="Думает. Решает. Побеждает."><span>Думает.</span><span>Решает.</span><span>Побеждает.</span></h2>
       <p class="txt">Лидер на площадке и надёжный партнёр вне её. Хладнокровен в напряжённые моменты, после поражений разбирает ошибки, а не ищет оправданий. Ему интересно не просто «как сделать», а «почему это работает».</p>
       <div class="cards">
-        <div class="card rv"><img src="img/inset-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Спорт</b><small>спортшкола и выезды на турниры в другие города</small></div></div>
+        <div class="card rv"><img src="img/sport-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Спорт</b><small>спортшкола и выезды на турниры в другие города</small></div></div>
         <div class="card rv"><img src="img/s6-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Учёба</b><small>грамота школы за успешную учёбу</small></div></div>
         <div class="card rv"><img src="img/moto-thumb.webp" width="200" height="200" alt="" loading="lazy"><div><b>Увлечения</b><small>шахматы, техника и мото</small></div></div>
       </div>
@@ -717,6 +717,13 @@ section{position:relative}
   /* плавный скролл */
   var lenis=new Lenis({lerp:0.1});
   lenis.on('scroll',ScrollTrigger.update);
+  /* ползунок и клик по полосе прокрутки: плавная прокрутка сразу отпускает страницу */
+  function onBar(e){if(e.target===root||e.clientX>=root.clientWidth){lenis.stop();}}
+  window.addEventListener('pointerdown',onBar,true);
+  window.addEventListener('pointerup',function(){if(lenis.isStopped&&!body.classList.contains('open'))lenis.start();},true);
+  window.addEventListener('scroll',function(){
+    if(lenis.isScrolling==='smooth'&&Math.abs(window.scrollY-lenis.animatedScroll)>40){lenis.reset();}
+  },{passive:true});
   gsap.ticker.add(function(t){lenis.raf(t*1000);});
   gsap.ticker.lagSmoothing(0);
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
